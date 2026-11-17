@@ -2,7 +2,7 @@
 
 A zero-backend, static website library for three classes at Simon A. Sanchez High School:
 
-1. **IT Essentials** - course directory ready
+1. **IT Essentials** — [RAID Failure Lab](it-essentials/raid-lab/) ready
 2. **Computer Networking** — course directory ready
 3. **Cybersecurity** — course directory ready
 
@@ -22,7 +22,14 @@ sanchez-electronics-interactive-sites/
 │   └── raid-lab/index.html             # RAID 0 / 1 / 5 / 10 simulator
 ├── networking/index.html              # Future Networking labs
 ├── cybersecurity/index.html           # Future Cybersecurity labs
-└── .github/workflows/pages.yml         # GitHub Pages deployment
+├── apps-script/                         # Google Form creation script
+└── DEPLOYMENT.md                        # GitHub Pages publishing guide
 ```
 
 
+
+## Publish with GitHub Pages
+
+The repository is public. In [Settings → Pages](https://github.com/iyannm/sanchez-electronics-interactive-sites/settings/pages), choose **Deploy from a branch**, then **main** and **/(root)**, and click **Save**. Once GitHub confirms publishing, use the **Visit site** link.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for details and the [Apps Script instructions](apps-script/README.md) to create a separate answer Form.

@@ -108,6 +108,54 @@ body { background: #f8faf9; }
   .visual-figure{min-height:265px}
 }
 
+
+/* Manual step diagrams: clean projector view */
+.visual-page{width:min(1450px,94%)}.visual-intro{padding:55px 0 45px}
+.visual-card{grid-template-columns:minmax(265px,.72fr) minmax(0,1.67fr);border-radius:16px;min-height:425px;box-shadow:0 7px 34px rgba(31,65,71,.045)}
+.visual-copy{padding:48px 38px}.visual-copy h2{font-size:clamp(34px,3.5vw,52px)}.visual-copy p{font-size:18px}
+.visual-figure{display:flex;flex-direction:column;justify-content:stretch;align-items:stretch;padding:0;min-height:425px}
+.scene-wrap{min-height:0;flex:1;width:100%;display:grid;place-items:center;padding:14px 29px 0}
+.scene-wrap svg{display:block;width:100%;height:auto;max-height:340px;overflow:visible}
+.stepbar{margin:0 31px 23px;border-top:1px solid #ccdddd;padding-top:18px;display:flex;gap:20px;align-items:center;justify-content:space-between;min-height:85px}
+.step-copy{display:flex;flex-direction:column;gap:7px;min-width:0;flex:1}
+.step-index{font-size:10px;font-weight:800;letter-spacing:.16em;color:#5e8d96}
+.step-caption{font-size:clamp(14px,1.15vw,18px);font-weight:600;color:#385960;line-height:1.36;letter-spacing:-.02em}
+.step-actions{display:flex;flex:0 0 auto;gap:8px}
+.step-btn{font:700 13px/1 Inter,"Helvetica Neue",Arial,sans-serif;border:1px solid #b9cdd1;background:#fff;color:#355760;border-radius:8px;padding:14px 18px;cursor:pointer;min-width:85px;transition:background .2s,transform .2s}
+.step-btn:hover:not(:disabled){background:#e2edef;transform:translateY(-1px)}
+.step-btn:disabled{opacity:.35;cursor:default}
+.step-btn:focus-visible{outline:3px solid #74adba;outline-offset:3px}
+.next-btn{background:#28444c;color:#fff;border-color:#28444c}
+.next-btn:hover:not(:disabled){background:#395c65}
+.schematic .n-line{stroke:#537782;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.schematic .n-device{fill:#fff;stroke:#577882;stroke-width:3}
+.schematic .n-screen{fill:#deedef;stroke:#9bbbc1;stroke-width:1.2}
+.schematic .n-soft{fill:#c0dce0}
+.schematic .n-accent{fill:#61a4b1}
+.schematic .n-green{fill:#6caa94}
+.schematic .n-red{fill:#bc7770}
+.schematic .n-router-bad{fill:#fae8e5;stroke:#b87168;stroke-width:3}
+.schematic .n-muted{stroke:#bed1d4;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-dasharray:7 10}
+.schematic .n-path{stroke:#5cabb5;stroke-width:3.4;fill:none;stroke-linecap:round}
+.schematic .n-danger-path{stroke:#b86e68;stroke-width:3.4;fill:none;stroke-linecap:round}
+.schematic .n-caption{font:700 15px Inter,"Helvetica Neue",Arial,sans-serif;fill:#52737a;text-anchor:middle;letter-spacing:.07em}
+.schematic .n-caption-red{font:700 15px Inter,"Helvetica Neue",Arial,sans-serif;fill:#ad625e;text-anchor:middle;letter-spacing:.07em}
+.schematic .n-pill{fill:#fff;stroke:#bcd3d8;stroke-width:1.5}
+.schematic .n-pill-red{fill:#f9e4e1;stroke:#c88f87;stroke-width:1.5}
+.schematic .n-pilltext{font:700 14px Inter,"Helvetica Neue",Arial,sans-serif;fill:#466b75;text-anchor:middle;letter-spacing:.025em}
+.schematic .n-pilltext-red{font:700 14px Inter,"Helvetica Neue",Arial,sans-serif;fill:#a8615b;text-anchor:middle;letter-spacing:.025em}
+.schematic .n-glow{animation:sketchPulse 2.5s ease-in-out infinite;transform-origin:center}
+.schematic .n-scan{animation:sketchScan 2.7s ease-in-out infinite}
+.schematic .n-shake{animation:sketchShake 1.7s ease-in-out infinite;transform-origin:center}
+.schematic .n-appear{animation:sketchAppear .38s ease-out both}
+@keyframes sketchPulse{0%,100%{opacity:.2}50%{opacity:1}}
+@keyframes sketchScan{0%,100%{opacity:.2;transform:scale(.95)}50%{opacity:1;transform:scale(1.08)}}
+@keyframes sketchShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+@keyframes sketchAppear{from{opacity:.15;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.visual-card{grid-template-columns:1fr}.visual-copy{padding:27px 26px}.visual-copy h2{font-size:38px;margin-bottom:10px}.visual-figure{min-height:350px}.scene-wrap{padding:0 15px}.stepbar{margin:0 18px 18px}.step-caption{font-size:16px}}
+@media(max-width:540px){.visual-page{width:95%}.visual-card{min-height:0}.visual-copy{padding:23px}.visual-figure{min-height:300px}.scene-wrap{padding:0 3px}.scene-wrap svg{max-height:245px}.stepbar{padding-top:12px;margin:0 12px 14px;gap:8px}.step-btn{padding:12px 10px;min-width:61px;font-size:12px}.step-caption{font-size:13px}.step-index{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.schematic *{animation:none!important}.schematic animateMotion,.schematic animate{display:none}}
+
 </style>
 </head>
 <body>
@@ -116,131 +164,155 @@ body { background: #f8faf9; }
   <header class="visual-intro">
     <div class="eyebrow">Cybersecurity essentials 3.0 / Module 5</div>
     <h1>Wireless networks<span>_</span></h1>
-    <p>Clear, looping animations for wireless communication and security.</p>
+    <p>Simple step-by-step animated diagrams for wireless communication and security.</p>
   </header>
   <div class="section-divider"><span>01 / WIRELESS COMMUNICATIONS</span><strong>5.1</strong></div>
 
-  <section class="visual-card" aria-labelledby="wireless-join">
-    <div class="visual-copy"><span class="num">01 / SLIDES 16–18</span><h2 id="wireless-join">Joining Wi-Fi</h2><p>A device finds and connects to an access point.</p></div>
-    <div class="visual-figure tint-cyan">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="join-title join-desc">
-        <title id="join-title">Wireless connection</title><desc id="join-desc">A phone discovers and associates with an access point, then data travels into the network.</desc>
-        <path class="faint-line" d="M225 172H378M528 172H656"/>
-        <g class="join-broadcast">
-          <path d="M336 127Q361 151 336 177" class="wave"/>
-          <path d="M308 102Q351 151 308 200" class="wave"/>
-        </g>
-        <g class="join-signal-one"><circle cx="227" cy="172" r="8" class="signal"/></g>
-        <g class="join-signal-two"><circle cx="530" cy="172" r="8" class="signal"/></g>
-        <g transform="translate(130 104)"><rect class="device" width="92" height="135" rx="14"/><rect class="screen" x="12" y="13" width="68" height="96" rx="5"/><circle cx="46" cy="121" r="4" class="soft-fill"/></g>
-        <g transform="translate(384 106)"><path class="antenna" d="M20 45V6M124 45V6"/><rect class="device" y="45" width="145" height="99" rx="13"/><circle cx="24" cy="124" r="5" class="good-fill"/><path class="wireless-glyph" d="M49 33Q72 12 95 33M58 43Q72 29 86 43M70 53l2 2 2-2"/></g>
-        <g transform="translate(656 112)"><path class="device" d="M41 121C2 123 0 80 24 68C27 28 81 18 108 50C143 40 171 67 164 93C161 113 144 122 120 121Z"/></g>
-        <g class="figure-labels"><text x="177" y="285">PHONE</text><text x="456" y="285">ACCESS POINT</text><text x="744" y="285">NETWORK</text></g>
-      </svg>
-    </div>
-  </section>
+  <section class="visual-card" id="diagram-join" data-concept="join" aria-labelledby="heading-join"><div class="visual-copy"><span class="num">01 / SLIDES 16–18</span><h2 id="heading-join">Joining Wi-Fi</h2><p>How a phone connects to an access point.</p></div><div class="visual-figure tint-cyan"><div class="scene-wrap" id="scene-join"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-join">STEP 01 / 04</span><strong class="step-caption" id="caption-join" aria-live="polite">The access point announces its network.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for Joining Wi-Fi">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for Joining Wi-Fi">Next →</button></div></div></div></section>
 
-  <section class="visual-card" aria-labelledby="csma">
-    <div class="visual-copy"><span class="num">02 / SLIDE 15</span><h2 id="csma">Taking turns</h2><p>Wi-Fi devices listen and wait before sending.</p></div>
-    <div class="visual-figure tint-cream">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="csma-title csma-desc">
-        <title id="csma-title">CSMA/CA shared airtime</title><desc id="csma-desc">Client A and Client B take turns sending data to an access point instead of transmitting together.</desc>
-        <g transform="translate(105 48)"><rect class="device" width="105" height="74" rx="9"/><rect class="screen" x="11" y="10" width="83" height="51" rx="3"/><path class="outline" d="M42 74v12h21V74M29 87H77"/></g>
-        <g transform="translate(105 213)"><rect class="device" width="105" height="74" rx="9"/><rect class="screen" x="11" y="10" width="83" height="51" rx="3"/><path class="outline" d="M42 74v12h21V74M29 87H77"/></g>
-        <path class="faint-line" d="M219 86H598M219 249H598"/>
-        <g class="turn-a"><circle cx="240" cy="86" r="9" class="signal"/></g><g class="turn-b"><circle cx="240" cy="249" r="9" class="signal"/></g>
-        <g transform="translate(626 109)"><path class="antenna" d="M12 45V10M125 45V10"/><rect class="device" x="0" y="45" width="140" height="90" rx="13"/><circle cx="22" cy="116" r="5" class="good-fill"/><path class="wireless-glyph" d="M39 32Q69 2 99 32M52 42Q69 23 86 42"/></g>
-        <g class="figure-labels"><text x="157" y="152">CLIENT A</text><text x="157" y="328">CLIENT B</text><text x="695" y="291">SHARED CHANNEL</text></g>
-      </svg>
-    </div>
-  </section>
+  <section class="visual-card" id="diagram-csma" data-concept="csma" aria-labelledby="heading-csma"><div class="visual-copy"><span class="num">02 / SLIDE 15</span><h2 id="heading-csma">Taking turns</h2><p>How Wi-Fi devices share one channel.</p></div><div class="visual-figure tint-cream"><div class="scene-wrap" id="scene-csma"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-csma">STEP 01 / 04</span><strong class="step-caption" id="caption-csma" aria-live="polite">Devices listen before transmitting.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for Taking turns">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for Taking turns">Next →</button></div></div></div></section>
 
-  <section class="visual-card" aria-labelledby="frame">
-    <div class="visual-copy"><span class="num">03 / SLIDE 14</span><h2 id="frame">What's in a frame?</h2><p>A wireless frame contains control details, data, and an error check.</p></div>
-    <div class="visual-figure tint-cyan">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="frame-title frame-desc">
-        <title id="frame-title">Simplified 802.11 frame</title><desc id="frame-desc">A wireless frame with header, payload and frame check sequence sections highlighted in order.</desc>
-        <g transform="translate(64 111)">
-          <rect x="0" y="0" width="288" height="125" rx="5" class="frame-header"/><rect x="296" y="0" width="320" height="125" rx="5" class="frame-payload"/><rect x="624" y="0" width="145" height="125" rx="5" class="frame-fcs"/>
-          <rect x="0" y="0" width="288" height="125" rx="5" class="frame-glow glow-one"/>
-          <rect x="296" y="0" width="320" height="125" rx="5" class="frame-glow glow-two"/>
-          <rect x="624" y="0" width="145" height="125" rx="5" class="frame-glow glow-three"/>
-          <g class="frame-text"><text x="144" y="59">HEADER</text><text x="456" y="59">PAYLOAD</text><text x="696" y="59">FCS</text></g>
-          <g class="frame-small"><text x="144" y="89">ADDRESSES + CONTROL</text><text x="456" y="89">DATA</text><text x="696" y="89">ERROR CHECK</text></g>
-        </g>
-      </svg>
-    </div>
-  </section>
+  <section class="visual-card" id="diagram-frame" data-concept="frame" aria-labelledby="heading-frame"><div class="visual-copy"><span class="num">03 / SLIDE 14</span><h2 id="heading-frame">Inside a frame</h2><p>The three main parts of a wireless frame.</p></div><div class="visual-figure tint-cyan"><div class="scene-wrap" id="scene-frame"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-frame">STEP 01 / 03</span><strong class="step-caption" id="caption-frame" aria-live="polite">The header carries addressing and control.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for Inside a frame">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for Inside a frame">Next →</button></div></div></div></section>
 
-  <section class="visual-card" aria-labelledby="wlc">
-    <div class="visual-copy"><span class="num">04 / SLIDE 19</span><h2 id="wlc">School Wi-Fi</h2><p>One controller can manage many access points.</p></div>
-    <div class="visual-figure tint-cream">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="wlc-title wlc-desc">
-        <title id="wlc-title">Wireless LAN controller managing access points</title><desc id="wlc-desc">One wireless controller sends management connections to three separate lightweight access points.</desc>
-        <rect class="device" x="365" y="38" rx="12" width="172" height="77"/><circle class="good-fill" cx="389" cy="60" r="5"/><path class="outline" d="M409 63H513M409 82H490"/>
-        <g class="figure-labels"><text x="450" y="19">CONTROLLER</text></g>
-        <path class="faint-line" d="M451 115V154H161V201M451 154V201M451 154H741V201"/>
-        <path class="controller-flow" d="M451 115V154H161V201M451 115V201M451 115V154H741V201"/>
-        <g transform="translate(104 201)"><path class="antenna" d="M15 36V2M98 36V2"/><rect class="device" y="36" width="114" height="66" rx="10"/><circle class="good-fill" cx="20" cy="83" r="4"/></g>
-        <g transform="translate(393 201)"><path class="antenna" d="M15 36V2M98 36V2"/><rect class="device" y="36" width="114" height="66" rx="10"/><circle class="good-fill" cx="20" cy="83" r="4"/></g>
-        <g transform="translate(683 201)"><path class="antenna" d="M15 36V2M98 36V2"/><rect class="device" y="36" width="114" height="66" rx="10"/><circle class="good-fill" cx="20" cy="83" r="4"/></g>
-        <g class="figure-labels"><text x="161" y="326">AP 1</text><text x="450" y="326">AP 2</text><text x="740" y="326">AP 3</text></g>
-      </svg>
-    </div>
-  </section>
+  <section class="visual-card" id="diagram-wlc" data-concept="wlc" aria-labelledby="heading-wlc"><div class="visual-copy"><span class="num">04 / SLIDE 19</span><h2 id="heading-wlc">School Wi-Fi</h2><p>How one controller manages many access points.</p></div><div class="visual-figure tint-cream"><div class="scene-wrap" id="scene-wlc"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-wlc">STEP 01 / 03</span><strong class="step-caption" id="caption-wlc" aria-live="polite">Access points cover different areas.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for School Wi-Fi">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for School Wi-Fi">Next →</button></div></div></div></section>
 
   <div class="section-divider threat-divider"><span>02 / WLAN THREATS</span><strong>5.2</strong></div>
 
-  <section class="visual-card" aria-labelledby="rogue">
-    <div class="visual-copy"><span class="num">05 / SLIDE 24</span><h2 id="rogue">Rogue access point</h2><p>An unapproved AP can create a new way into the network.</p></div>
-    <div class="visual-figure tint-cyan">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="rogue-title rogue-desc">
-        <title id="rogue-title">Unauthorized AP attached to a wired network</title><desc id="rogue-desc">An approved AP and an unauthorized rogue AP are both connected to the same wired school network.</desc>
-        <rect class="device" x="343" y="42" rx="8" width="215" height="75"/><path class="outline" d="M368 73H532M368 90H532"/><g class="figure-labels"><text x="450" y="25">SCHOOL NETWORK</text></g>
-        <path class="faint-line" d="M450 117V167H227V206M450 167H672V206"/>
-        <g transform="translate(162 206)"><path class="antenna" d="M18 32V0M112 32V0"/><rect class="device" y="32" width="130" height="74" rx="10"/><circle class="good-fill" cx="23" cy="87" r="5"/></g>
-        <g transform="translate(607 206)"><path class="antenna danger-line" d="M18 32V0M112 32V0"/><rect class="device rogue-device" y="32" width="130" height="74" rx="10"/><circle class="bad-fill" cx="23" cy="87" r="5"/></g>
-        <g class="rogue-pulse"><circle cx="673" cy="193" r="34" fill="none" stroke="#c07e77" stroke-width="2"/></g>
-        <g class="figure-labels"><text x="227" y="331">APPROVED</text><text x="672" y="331" class="bad-text">UNAUTHORIZED</text></g>
-      </svg>
-    </div>
-  </section>
+  <section class="visual-card" id="diagram-rogue" data-concept="rogue" aria-labelledby="heading-rogue"><div class="visual-copy"><span class="num">05 / SLIDE 24</span><h2 id="heading-rogue">Rogue access point</h2><p>What happens when someone adds an unapproved AP.</p></div><div class="visual-figure tint-cyan"><div class="scene-wrap" id="scene-rogue"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-rogue">STEP 01 / 03</span><strong class="step-caption" id="caption-rogue" aria-live="polite">The school has an approved access point.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for Rogue access point">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for Rogue access point">Next →</button></div></div></div></section>
 
-  <section class="visual-card" aria-labelledby="evil">
-    <div class="visual-copy"><span class="num">06 / SLIDE 25</span><h2 id="evil">Evil twin</h2><p>A fake Wi-Fi network copies the real network's name.</p></div>
-    <div class="visual-figure tint-cream">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="evil-title evil-desc">
-        <title id="evil-title">Evil twin network imitates a trusted SSID</title><desc id="evil-desc">A phone sees two access points advertising the same name; the malicious copy is not the legitimate access point.</desc>
-        <g transform="translate(85 112)"><rect class="device" width="88" height="135" rx="14"/><rect class="screen" x="12" y="12" width="64" height="97" rx="4"/><circle class="soft-fill" cx="44" cy="121" r="4"/></g>
-        <path class="faint-line" d="M178 178H280M178 178H561"/>
-        <g class="evil-route"><path d="M185 178H550" class="danger-flow"/></g>
-        <g transform="translate(279 113)"><path class="antenna" d="M16 34V0M114 34V0"/><rect class="device" y="34" width="130" height="95" rx="11"/><circle class="good-fill" cx="23" cy="107" r="4"/></g>
-        <g transform="translate(561 113)"><path class="antenna danger-line" d="M16 34V0M114 34V0"/><rect class="device rogue-device" y="34" width="130" height="95" rx="11"/><circle class="bad-fill" cx="23" cy="107" r="4"/></g>
-        <g class="network-names"><text x="344" y="77">SCHOOL_WIFI</text><text x="626" y="77">SCHOOL_WIFI</text></g>
-        <g class="figure-labels"><text x="129" y="286">PHONE</text><text x="344" y="286">REAL</text><text x="626" y="286" class="bad-text">FAKE</text></g>
-      </svg>
-    </div>
-  </section>
+  <section class="visual-card" id="diagram-evil" data-concept="evil" aria-labelledby="heading-evil"><div class="visual-copy"><span class="num">06 / SLIDE 25</span><h2 id="heading-evil">Evil twin</h2><p>When a fake network copies a real Wi-Fi name.</p></div><div class="visual-figure tint-cream"><div class="scene-wrap" id="scene-evil"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-evil">STEP 01 / 03</span><strong class="step-caption" id="caption-evil" aria-live="polite">A legitimate access point advertises its SSID.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for Evil twin">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for Evil twin">Next →</button></div></div></div></section>
 
-  <section class="visual-card" aria-labelledby="interference">
-    <div class="visual-copy"><span class="num">07 / SLIDE 23</span><h2 id="interference">Wi-Fi interference</h2><p>Radio interference can disrupt connections — even without an attacker.</p></div>
-    <div class="visual-figure tint-cyan">
-      <svg viewBox="0 0 900 350" role="img" aria-labelledby="noise-title noise-desc">
-        <title id="noise-title">Wireless interference</title><desc id="noise-desc">A wireless client communicates with an AP, while interference crosses the radio channel and temporarily disrupts reliable transmission.</desc>
-        <g transform="translate(94 132)"><rect class="device" width="90" height="128" rx="13"/><rect class="screen" x="11" y="12" width="68" height="94" rx="4"/><circle class="soft-fill" cx="45" cy="116" r="3"/></g>
-        <g transform="translate(669 127)"><path class="antenna" d="M14 41V0M120 41V0"/><rect class="device" y="41" width="133" height="94" rx="11"/></g>
-        <path class="faint-line" d="M191 196H653"/>
-        <g class="interference-signal"><circle class="signal" cx="209" cy="196" r="9"/></g>
-        <g class="interference-noise">
-          <path d="M365 62L402 114L371 146L415 186L380 221L417 268L391 307" fill="none" stroke="#ba7872" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
-          <path d="M474 62L444 114L476 146L436 186L478 221L440 268L473 307" fill="none" stroke="#ba7872" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
-        </g>
-        <g class="figure-labels"><text x="139" y="310">CLIENT</text><text x="735" y="310">ACCESS POINT</text></g>
-      </svg>
-    </div>
-  </section>
-  <p class="sim-note">Animated concept diagrams, not live network demonstrations. Designed for projected teaching; no controls or student data collection.</p>
+  <section class="visual-card" id="diagram-noise" data-concept="noise" aria-labelledby="heading-noise"><div class="visual-copy"><span class="num">07 / SLIDE 23</span><h2 id="heading-noise">Wi-Fi interference</h2><p>Why wireless service may become unreliable.</p></div><div class="visual-figure tint-cyan"><div class="scene-wrap" id="scene-noise"></div><div class="stepbar"><div class="step-copy"><span class="step-index" id="index-noise">STEP 01 / 03</span><strong class="step-caption" id="caption-noise" aria-live="polite">A phone sends data to the access point.</strong></div><div class="step-actions"><button type="button" class="step-btn back-btn" data-direction="-1" aria-label="Previous step for Wi-Fi interference">← Back</button><button type="button" class="step-btn next-btn" data-direction="1" aria-label="Next step for Wi-Fi interference">Next →</button></div></div></div></section>
+  <p class="sim-note">Illustrative teaching diagrams only. Each step moves when you press Next. No real network activity or student information is collected.</p>
 </main>
 <footer><div class="wrap">SANCHEZ ELECTRONICS / CYBERSECURITY · EDUCATIONAL DIAGRAMS</div></footer>
+<script>
+(function(){
+"use strict";
+var captions={"join":["The access point announces its network.","The phone starts authentication.","The phone associates with the AP.","Data can now travel through the AP."],"csma":["Devices listen before transmitting.","A busy channel means wait and back off.","Client A sends its frame.","The AP replies; Client B gets a turn."],"frame":["The header carries addressing and control.","The payload carries the data.","The FCS detects possible frame errors."],"wlc":["Access points cover different areas.","The controller manages AP settings.","Students connect to nearby APs."],"rogue":["The school has an approved access point.","Someone connects an unauthorized AP.","That AP may expose the internal network."],"evil":["A legitimate access point advertises its SSID.","A fake AP advertises the same SSID.","A client might connect to the fake AP."],"noise":["A phone sends data to the access point.","Another device interferes with the signal.","Frames may fail and need retransmission."]};
+var state={};
+function txt(x,y,t,bad){return '<text x="'+x+'" y="'+y+'" class="'+(bad?'n-caption-red':'n-caption')+'">'+t+'</text>'}
+function line(x1,y1,x2,y2,active,bad){
+ return '<path d="M'+x1+' '+y1+'L'+x2+' '+y2+'" class="'+(active?(bad?'n-danger-path':'n-path'):'n-muted')+'"/>';
+}
+function packet(x1,y1,x2,y2,bad,dur){
+ return '<circle r="7" fill="'+(bad?'#bf766d':'#4f9fac')+'"><animateMotion path="M '+x1+' '+y1+' L '+x2+' '+y2+'" dur="'+(dur||'2.2s')+'" repeatCount="indefinite"/></circle>';
+}
+function pulse(x,y,r,bad){
+ return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="none" stroke="'+(bad?'#c57f77':'#67a7b2')+'" stroke-width="3"><animate attributeName="r" values="'+(r-8)+';'+(r+13)+';'+(r+22)+'" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;.38;0" dur="2.4s" repeatCount="indefinite"/></circle>';
+}
+function flag(x,y,t,bad){
+ var w=Math.max(100,t.length*9+28);
+ return '<g class="n-appear"><rect x="'+(x-w/2)+'" y="'+y+'" width="'+w+'" height="38" rx="19" class="'+(bad?'n-pill-red':'n-pill')+'"/><text x="'+x+'" y="'+(y+24)+'" class="'+(bad?'n-pilltext-red':'n-pilltext')+'">'+t+'</text></g>';
+}
+function phone(x,y){
+ return '<g transform="translate('+x+' '+y+')"><rect width="85" height="146" rx="15" class="n-device"/><rect x="9" y="17" width="67" height="103" rx="5" class="n-screen"/><path d="M31 8H54" class="n-line"/><circle cx="42.5" cy="135" r="4" class="n-soft"/><path d="M22 42Q42 25 62 42M29 52Q42 40 55 52M39 62L43 66L47 62" class="n-line" stroke-width="2.5"/></g>';
+}
+function laptop(x,y){
+ return '<g transform="translate('+x+' '+y+')"><rect x="8" width="136" height="92" rx="7" class="n-device"/><rect x="20" y="11" width="112" height="67" rx="3" class="n-screen"/><path d="M0 95L152 95L163 112Q161 119 153 119H9Q2 119 0 112Z" fill="#fff" stroke="#577882" stroke-width="3"/><path d="M59 103H105" class="n-line" stroke-width="2"/></g>';
+}
+function router(x,y,bad){
+ return '<g transform="translate('+x+' '+y+')"><path d="M18 64V6M134 64V6" class="'+(bad?'n-danger-path':'n-line')+'"/><rect x="0" y="61" width="152" height="82" rx="13" class="'+(bad?'n-router-bad':'n-device')+'"/><rect x="16" y="84" width="119" height="16" rx="7" fill="'+(bad?'#f4ceca':'#e0eef0')+'"/><circle cx="29" cy="122" r="5" class="'+(bad?'n-red':'n-green')+'"/><circle cx="46" cy="122" r="5" class="n-soft"/><path d="M48 45Q76 17 104 45M59 55Q76 37 93 55M72 65L76 69L80 65" class="'+(bad?'n-danger-path':'n-line')+'"/></g>';
+}
+function cloud(x,y){
+ return '<g transform="translate('+x+' '+y+')"><path d="M31 109C4 109 2 80 17 64C25 55 30 56 40 55C46 18 98 10 117 40C135 29 163 40 164 64C196 62 198 108 164 109Z" class="n-device"/><path d="M66 80H136M113 68L137 80L113 92" class="n-line"/></g>';
+}
+function server(x,y){
+ return '<g transform="translate('+x+' '+y+')"><rect width="160" height="127" rx="11" class="n-device"/><rect x="16" y="18" width="128" height="26" rx="5" class="n-screen"/><rect x="16" y="52" width="128" height="26" rx="5" class="n-screen"/><rect x="16" y="86" width="128" height="26" rx="5" class="n-screen"/><g fill="#669b9e"><circle cx="32" cy="31" r="4"/><circle cx="32" cy="65" r="4"/><circle cx="32" cy="99" r="4"/></g><path d="M53 31H126M53 65H126M53 99H126" class="n-line" stroke-width="2"/></g>';
+}
+function warning(x,y){
+ return '<g transform="translate('+x+' '+y+')"><path d="M0 78L43 0L86 78Z" fill="#f7e4de" stroke="#b7736d" stroke-width="3"/><path d="M43 28V52" stroke="#a85d56" stroke-width="6" stroke-linecap="round"/><circle cx="43" cy="64" r="4" fill="#a85d56"/></g>';
+}
+function renderJoin(s){
+ var a=phone(100,108)+router(373,91,false)+cloud(671,118);
+ a+=line(185,177,373,177,s>=1,false)+line(525,177,670,177,s===3,false);
+ if(s===0){a+=pulse(365,171,22,false)+flag(286,45,"BEACON",false)+packet(360,177,198,177,false,"2.6s")}
+ if(s===1){a+=flag(285,45,"AUTHENTICATE",false)+packet(196,177,360,177,false,"2.6s")}
+ if(s===2){a+=flag(285,45,"ASSOCIATE",false)+packet(196,177,360,177,false,"2.6s");a+=pulse(370,171,16,false)}
+ if(s===3){a+=flag(286,45,"CONNECTED",false)+packet(196,177,361,177,false,"2s")+packet(527,177,661,177,false,"2s")}
+ return a+txt(142,298,"PHONE")+txt(450,298,"ACCESS POINT")+txt(762,298,"NETWORK");
+}
+function renderCSMA(s){
+ var a=laptop(80,40)+laptop(80,212)+router(673,89,false);
+ a+=line(244,105,665,105,s===2,false)+line(244,258,665,194,s===3,false);
+ if(s===0){a+=flag(442,28,"LISTEN",false)+pulse(239,102,22,false)+pulse(239,257,22,false)}
+ if(s===1){a+=flag(442,28,"WAIT / BACKOFF",false)+flag(452,240,"CHANNEL BUSY",false)}
+ if(s===2){a+=flag(444,28,"CLIENT A SENDS",false)+packet(256,105,652,105,false,"2.5s")}
+ if(s===3){a+=flag(465,28,"ACK / NEXT TURN",false)+packet(645,148,253,123,false,"2.4s")+packet(258,254,655,194,false,"3s")}
+ return a+txt(160,181,"CLIENT A")+txt(160,337,"CLIENT B")+txt(749,284,"ACCESS POINT");
+}
+function renderFrame(s){
+ var rects=[{x:72,w:255,title:"HEADER",desc:"ADDRESSES + CONTROL"},{x:338,w:319,title:"PAYLOAD",desc:"DATA"},{x:668,w:153,title:"FCS",desc:"ERROR CHECK"}];
+ var a='';
+ rects.forEach(function(r,i){
+ var on=i===s;
+ a+='<g class="n-appear"><rect x="'+r.x+'" y="122" width="'+r.w+'" height="124" rx="9" fill="'+(on?'#a6d1d9':'#e4eded')+'" stroke="'+(on?'#5799a6':'#b5cbd0')+'" stroke-width="'+(on?'3':'2')+'"/>';
+ a+='<text x="'+(r.x+r.w/2)+'" y="178" text-anchor="middle" fill="#30545f" style="font:700 25px Inter,Arial,sans-serif">'+r.title+'</text>';
+ a+='<text x="'+(r.x+r.w/2)+'" y="207" text-anchor="middle" fill="#607d83" style="font:600 13px Inter,Arial,sans-serif">'+r.desc+'</text></g>';
+ if(on)a+=pulse(r.x+r.w/2,86,19,false);
+ });
+ a+=flag(s===0?200:s===1?490:745,25,s===0?"ROUTING INFO":s===1?"MESSAGE":"ERROR CHECK",false);
+ return a;
+}
+function renderWLC(s){
+ var a=server(365,22);
+ a+=line(445,151,445,174,s>0,false)+line(445,174,187,174,s>0,false)+line(445,174,706,174,s>0,false);
+ [113,372,632].forEach(function(x){
+ a+=router(x,184,false);
+ });
+ [187,445,708].forEach(function(x){a+=line(x,174,x,184,s>0,false)});
+ if(s===1){a+=flag(444,159,"CENTRAL SETTINGS",false)+packet(445,159,188,174,false,"2.7s")+packet(445,159,708,174,false,"2.7s")}
+ if(s===2){a+=phone(41,194)+phone(789,194)+line(126,244,113,244,true,false)+line(784,244,785,244,true,false)+pulse(171,228,18,false)+pulse(689,228,18,false)}
+ return a+txt(445,11,"CONTROLLER")+txt(187,341,"AP 1")+txt(448,341,"AP 2")+txt(708,341,"AP 3");
+}
+function renderRogue(s){
+ var a=server(352,20)+router(145,188,false);
+ a+=line(432,148,432,172,true,false)+line(432,172,221,172,true,false)+line(221,172,221,188,true,false);
+ if(s>=1){a+=router(640,188,true)+line(432,172,716,172,true,true)+line(716,172,716,188,true,true)}
+ if(s===1){a+=flag(694,33,"UNAPPROVED",true)+pulse(713,180,21,true)}
+ if(s===2){a+=phone(794,132)+warning(567,84)+line(793,215,777,215,true,true)+pulse(709,189,24,true)}
+ return a+txt(432,12,"SCHOOL NETWORK")+txt(221,341,"APPROVED AP")+(s>=1?txt(716,341,"ROGUE AP",true):'');
+}
+function renderEvil(s){
+ var a=phone(66,133)+router(322,119,false);
+ a+=flag(398,49,"SCHOOL_WIFI",false);
+ if(s>=1){a+=router(652,119,true)+flag(728,49,"SCHOOL_WIFI",true)}
+ if(s===0)a+=line(152,203,322,203,false,false);
+ if(s===1){a+=line(152,203,322,203,false,false)+line(152,213,652,213,false,true)}
+ if(s===2){a+=line(152,203,652,203,true,true)+packet(168,203,638,203,true,"2.7s")+warning(541,60)}
+ return a+txt(109,318,"PHONE")+txt(398,318,"REAL AP")+(s>=1?txt(728,318,"FAKE AP",true):'');
+}
+function renderNoise(s){
+ var a=phone(91,126)+router(665,114,false);
+ a+=line(176,200,652,200,s!==1,false);
+ if(s===0){a+=packet(190,200,635,200,false,"2.9s")+flag(428,48,"CLEAR SIGNAL",false)}
+ if(s>=1){a+='<g class="'+(s===1?'n-shake':'')+'">'+warning(397,85)+'</g>';a+=flag(435,48,s===1?"INTERFERENCE":"RETRY",true)}
+ if(s===2){a+=packet(200,200,624,200,false,"3.8s")+pulse(430,199,22,true)}
+ return a+txt(135,318,"CLIENT")+txt(741,318,"ACCESS POINT");
+}
+var scenes={join:renderJoin,csma:renderCSMA,frame:renderFrame,wlc:renderWLC,rogue:renderRogue,evil:renderEvil,noise:renderNoise};
+function draw(card){
+ var key=card.getAttribute("data-concept"),step=state[key],steps=captions[key];
+ var content='<svg class="schematic" viewBox="0 0 900 350" role="img" aria-label="'+steps[step]+'" xmlns="http://www.w3.org/2000/svg">'+scenes[key](step)+'</svg>';
+ card.querySelector(".scene-wrap").innerHTML=content;
+ card.querySelector(".step-index").textContent="STEP "+String(step+1).padStart(2,"0")+" / "+String(steps.length).padStart(2,"0");
+ card.querySelector(".step-caption").textContent=steps[step];
+ card.querySelector(".back-btn").disabled=step===0;
+ card.querySelector(".next-btn").textContent=step===steps.length-1?"↻ Replay":"Next →";
+}
+document.querySelectorAll(".visual-card[data-concept]").forEach(function(card){
+ var key=card.getAttribute("data-concept");
+ state[key]=0; draw(card);
+ card.querySelector(".step-actions").addEventListener("click",function(event){
+ var b=event.target.closest("button[data-direction]");
+ if(!b)return;
+ var step=state[key],last=captions[key].length-1;
+ if(b.getAttribute("data-direction")==="-1")state[key]=Math.max(0,step-1);
+ else state[key]=step>=last?0:step+1;
+ draw(card);
+ });
+});
+})();
+</script>
 </body>
 </html>

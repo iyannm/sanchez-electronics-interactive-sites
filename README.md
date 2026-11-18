@@ -4,7 +4,7 @@ A zero-backend, static website library for three classes at Simon A. Sanchez Hig
 
 1. **IT Essentials** — [RAID Failure Lab](it-essentials/raid-lab/) ready
 2. **Computer Networking** — course directory ready
-3. **Cybersecurity** — course directory ready
+3. **Cybersecurity** — [Wireless Network Visual Lab](cybersecurity/wireless-lab/) ready (Sections 5.1–5.2, five interactive diagrams)
 
 **Simulation only.** Students answer on a separately hosted Google Form, not on this website. The website never collects names, email addresses or submissions. It can run from local `index.html` files or from GitHub Pages.
 
@@ -33,3 +33,7 @@ sanchez-electronics-interactive-sites/
 The repository is public. In [Settings → Pages](https://github.com/iyannm/sanchez-electronics-interactive-sites/settings/pages), choose **Deploy from a branch**, then **main** and **/(root)**, and click **Save**. Once GitHub confirms publishing, use the **Visit site** link.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for details and the [Apps Script instructions](apps-script/README.md) to create a separate answer Form.
+
+## Wireless Network Visual Lab (Cybersecurity 5.1–5.2)
+
+Open [Cybersecurity → Wireless Network Visual Lab](cybersecurity/wireless-lab/). The site provides five projector-friendly diagram modes: client/AP discovery and association, CSMA/CA airtime, clickable 802.11 frame fields, managed wireless APs/WLCs, and WLAN threat scenarios. Each mode has steps, reset controls, and questions to discuss in class. This is a safe schematic simulation, not an operational network scanner or packet tool. No student information is collected.

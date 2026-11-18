@@ -4,7 +4,7 @@ A zero-backend, static website library for three classes at Simon A. Sanchez Hig
 
 1. **IT Essentials** — [RAID Failure Lab](it-essentials/raid-lab/) ready
 2. **Computer Networking** — course directory ready
-3. **Cybersecurity** — [Wireless Network Visual Lab](cybersecurity/wireless-lab/) ready (Sections 5.1–5.2, seven automatic animated diagrams)
+3. **Cybersecurity** — [Wireless Network Visual Lab](cybersecurity/wireless-lab/) ready (Sections 5.1–5.2, seven step-by-step animated diagrams)
 
 **Simulation only.** Students answer on a separately hosted Google Form, not on this website. The website never collects names, email addresses or submissions. It can run from local `index.html` files or from GitHub Pages.
 
@@ -36,4 +36,4 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for details and the [Apps Script instructions
 
 ## Wireless Network Visual Lab (Cybersecurity 5.1–5.2)
 
-Open [Cybersecurity → Wireless Network Visual Lab](cybersecurity/wireless-lab/). The site provides seven simple, automatically animated diagrams: Wi-Fi joining, CSMA/CA, 802.11 frame structure, controller-managed APs, rogue access points, evil twins, and wireless interference. The page has no buttons, tabs, or quiz controls. This is a safe schematic simulation, not an operational network scanner or packet tool. No student information is collected.
+Open [Cybersecurity → Wireless Network Visual Lab](cybersecurity/wireless-lab/). The site provides seven step-by-step animated SVG diagrams: Wi-Fi joining, CSMA/CA, 802.11 frame structure, controller-managed APs, rogue access points, evil twins, and wireless interference. Each diagram has its own Back, Next, and Replay sequence, short captions, and no quizzes or student data collection. This is a safe schematic simulation, not an operational network scanner or packet tool. No student information is collected.

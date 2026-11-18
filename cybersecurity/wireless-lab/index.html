@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfcfc">
+  <meta name="description" content="Interactive visual demonstrations for Cisco Cybersecurity Essentials 3.0, wireless communications and WLAN threats.">
+  <title>Wireless Network Visual Lab | Sanchez Electronics</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="wireless-lab.css">
+  <script src="wireless-lab.js" defer></script>
+</head>
+<body>
+  <header class="site">
+    <div class="nav wrap">
+      <a class="brand" href="../../">SANCHEZ <em>/</em><br>ELECTRONICS</a>
+      <span class="tag">Cybersecurity / Module 05</span>
+      <nav aria-label="Breadcrumbs"><a href="../../">Library</a><a href="../">Cybersecurity</a></nav>
+    </div>
+  </header>
+  <main class="wrap wireless-page">
+    <section class="lab-heading">
+      <div class="heading-copy">
+        <div class="eyebrow">Cybersecurity Essentials 3.0 / Sections 5.1 + 5.2</div>
+        <h1>Inside a wireless<br><strong>network_</strong></h1>
+        <p>Five interactive teaching diagrams. Explore how Wi-Fi connects, shares the air, carries frames, scales across a campus, and encounters security threats.</p>
+      </div>
+      <div class="heading-meta" aria-label="Learning lab information">
+        <span class="meta-number">05<span class="slash">/</span>05</span>
+        <div class="meta-rule"></div>
+        <strong>VISUAL CONCEPT LAB</strong>
+        <span>Projection-ready · No account required</span>
+      </div>
+    </section>
+    <section class="lab-shell" id="visual-lab" aria-label="Interactive wireless network diagrams">
+      <div class="lab-navigation">
+        <div class="nav-heading"><span class="nav-dot"></span> CHOOSE A DIAGRAM</div>
+        <div class="tabs" id="topic-tabs" role="tablist" aria-label="Choose visual lesson">
+          <button type="button" class="topic-tab active" data-topic="connection" role="tab" aria-selected="true"><small>01 / 5.1</small><strong>Connection</strong></button>
+          <button type="button" class="topic-tab" data-topic="airtime" role="tab" aria-selected="false"><small>02 / 5.1</small><strong>CSMA/CA</strong></button>
+          <button type="button" class="topic-tab" data-topic="frames" role="tab" aria-selected="false"><small>03 / 5.1</small><strong>Frames</strong></button>
+          <button type="button" class="topic-tab" data-topic="infrastructure" role="tab" aria-selected="false"><small>04 / 5.1</small><strong>AP & WLC</strong></button>
+          <button type="button" class="topic-tab" data-topic="threats" role="tab" aria-selected="false"><small>05 / 5.2</small><strong>WLAN threats</strong></button>
+        </div>
+      </div>
+      <div class="workspace-grid">
+        <section class="main-panel" aria-label="Diagram and controls">
+          <div class="stage-heading"><div><span class="eyebrow" id="stage-kicker">CISCO SLIDES 16–18</span><h2 id="stage-title">How a client joins Wi-Fi</h2></div><button class="stage-full" type="button" id="fullscreen-btn" aria-label="Fullscreen diagram">⛶ <span>Fullscreen</span></button></div>
+          <div class="diagram-stage" id="diagram-stage">
+            <div class="diagram-visual" id="diagram-visual" aria-live="off"></div>
+            <div class="diagram-caption"><span class="legend-dot"></span><span id="diagram-caption">Schematic model · Not a connection to a real network</span></div>
+          </div>
+          <div class="stage-transport">
+            <span class="step-counter" id="step-counter">STEP 01 / 04</span>
+            <button type="button" class="transport-button" id="previous-step">← Back</button>
+            <button type="button" class="transport-button primary" id="next-step">Next step →</button>
+          </div>
+        </section>
+        <aside class="teaching-panel" aria-label="Explanation and demonstration controls">
+          <div class="aside-kicker"><span class="live-dot"></span><span id="aside-section">5.1 / WIRELESS COMMUNICATIONS</span></div>
+          <div class="aside-index" id="aside-index">01</div>
+          <h2 id="aside-title">Discovery comes first.</h2>
+          <p id="aside-description">A client must find an access point before it can join the network.</p>
+          <div class="control-region"><div class="small-label">INTERACTIVE CONTROLS</div><div id="lab-controls"></div></div>
+          <div class="insight-card"><span class="small-label">WHAT THIS SHOWS</span><p id="insight-text">The client is scanning for a wireless network.</p></div>
+          <div class="prompt-block"><span class="small-label">ASK YOUR CLASS</span><p id="teacher-prompt">How does your phone find a nearby access point?</p></div>
+          <button type="button" class="reset-button" id="reset-lab">↺ Reset this diagram</button>
+        </aside>
+      </div>
+      <div class="lesson-foot">
+        <div><strong id="foot-title">DISCOVER / AUTHENTICATE / ASSOCIATE</strong><p id="foot-description">The diagrams simplify real protocols so you can focus on the important ideas.</p></div>
+        <div class="key-hint">Use the left / right arrow keys to step through the selected diagram.</div>
+      </div>
+    </section>
+    <section class="below-lab">
+      <div><span class="eyebrow">Instructor guide</span><h2>When to use each<br>diagram_</h2></div>
+      <div class="slide-map">
+        <div><span>01</span><strong>Slides 16–18</strong><p>Discovery, authentication, association, and security setup.</p></div>
+        <div><span>02</span><strong>Slide 15</strong><p>Shared airtime, listening, random backoff, and ACKs.</p></div>
+        <div><span>03</span><strong>Slide 14</strong><p>Tap an 802.11 frame field to explain its purpose.</p></div>
+        <div><span>04</span><strong>Slide 19</strong><p>Compare home wireless with controller-managed campus Wi-Fi.</p></div>
+        <div><span>05</span><strong>Slides 22–25</strong><p>Compare interception, rogue APs, evil twins, and interference.</p></div>
+      </div>
+    </section>
+    <p class="safety-note">Conceptual simulation only. No Wi-Fi scanning, packet capture, network attacks, student data collection, or backend services. Cisco and IEEE terminology is used for teaching; this site is not an official Cisco resource.</p>
+  </main>
+  <footer><div class="wrap">SANCHEZ ELECTRONICS / CYBERSECURITY · INTERACTIVE LEARNING · NO STUDENT RESPONSES COLLECTED</div></footer>
+  <noscript><p class="wrap">This visual lab needs JavaScript enabled to run the diagrams.</p></noscript>
+</body>
+</html>

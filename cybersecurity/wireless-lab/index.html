@@ -1,90 +1,145 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fbfcfc">
-  <meta name="description" content="Interactive visual demonstrations for Cisco Cybersecurity Essentials 3.0, wireless communications and WLAN threats.">
-  <title>Wireless Network Visual Lab | Sanchez Electronics</title>
-  <link rel="stylesheet" href="../../assets/styles.css">
-  <link rel="stylesheet" href="wireless-lab.css">
-  <script src="wireless-lab.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbfcfc">
+<meta name="description" content="Simple animated wireless networking diagrams for Cisco Cybersecurity sections 5.1 and 5.2.">
+<title>Wireless Networks | Sanchez Electronics</title>
+<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="stylesheet" href="wireless-lab.css">
 </head>
 <body>
-  <header class="site">
-    <div class="nav wrap">
-      <a class="brand" href="../../">SANCHEZ <em>/</em><br>ELECTRONICS</a>
-      <span class="tag">Cybersecurity / Module 05</span>
-      <nav aria-label="Breadcrumbs"><a href="../../">Library</a><a href="../">Cybersecurity</a></nav>
-    </div>
+<header class="site"><div class="nav wrap"><a class="brand" href="../../">SANCHEZ <em>/</em><br>ELECTRONICS</a><span class="tag">Cybersecurity / Module 05</span><nav aria-label="Breadcrumbs"><a href="../../">Library</a><a href="../">Cybersecurity</a></nav></div></header>
+<main class="wrap visual-page">
+  <header class="visual-intro">
+    <div class="eyebrow">Cybersecurity essentials 3.0 / Module 5</div>
+    <h1>Wireless networks<span>_</span></h1>
+    <p>Simple moving diagrams to show how Wi-Fi works — and what can go wrong.</p>
   </header>
-  <main class="wrap wireless-page">
-    <section class="lab-heading">
-      <div class="heading-copy">
-        <div class="eyebrow">Cybersecurity Essentials 3.0 / Sections 5.1 + 5.2</div>
-        <h1>Inside a wireless<br><strong>network_</strong></h1>
-        <p>Five interactive teaching diagrams. Explore how Wi-Fi connects, shares the air, carries frames, scales across a campus, and encounters security threats.</p>
-      </div>
-      <div class="heading-meta" aria-label="Learning lab information">
-        <span class="meta-number">05<span class="slash">/</span>05</span>
-        <div class="meta-rule"></div>
-        <strong>VISUAL CONCEPT LAB</strong>
-        <span>Projection-ready · No account required</span>
-      </div>
-    </section>
-    <section class="lab-shell" id="visual-lab" aria-label="Interactive wireless network diagrams">
-      <div class="lab-navigation">
-        <div class="nav-heading"><span class="nav-dot"></span> CHOOSE A DIAGRAM</div>
-        <div class="tabs" id="topic-tabs" role="tablist" aria-label="Choose visual lesson">
-          <button type="button" class="topic-tab active" data-topic="connection" role="tab" aria-selected="true"><small>01 / 5.1</small><strong>Connection</strong></button>
-          <button type="button" class="topic-tab" data-topic="airtime" role="tab" aria-selected="false"><small>02 / 5.1</small><strong>CSMA/CA</strong></button>
-          <button type="button" class="topic-tab" data-topic="frames" role="tab" aria-selected="false"><small>03 / 5.1</small><strong>Frames</strong></button>
-          <button type="button" class="topic-tab" data-topic="infrastructure" role="tab" aria-selected="false"><small>04 / 5.1</small><strong>AP & WLC</strong></button>
-          <button type="button" class="topic-tab" data-topic="threats" role="tab" aria-selected="false"><small>05 / 5.2</small><strong>WLAN threats</strong></button>
-        </div>
-      </div>
-      <div class="workspace-grid">
-        <section class="main-panel" aria-label="Diagram and controls">
-          <div class="stage-heading"><div><span class="eyebrow" id="stage-kicker">CISCO SLIDES 16–18</span><h2 id="stage-title">How a client joins Wi-Fi</h2></div><button class="stage-full" type="button" id="fullscreen-btn" aria-label="Fullscreen diagram">⛶ <span>Fullscreen</span></button></div>
-          <div class="diagram-stage" id="diagram-stage">
-            <div class="diagram-visual" id="diagram-visual" aria-live="off"></div>
-            <div class="diagram-caption"><span class="legend-dot"></span><span id="diagram-caption">Schematic model · Not a connection to a real network</span></div>
-          </div>
-          <div class="stage-transport">
-            <span class="step-counter" id="step-counter">STEP 01 / 04</span>
-            <button type="button" class="transport-button" id="previous-step">← Back</button>
-            <button type="button" class="transport-button primary" id="next-step">Next step →</button>
-          </div>
-        </section>
-        <aside class="teaching-panel" aria-label="Explanation and demonstration controls">
-          <div class="aside-kicker"><span class="live-dot"></span><span id="aside-section">5.1 / WIRELESS COMMUNICATIONS</span></div>
-          <div class="aside-index" id="aside-index">01</div>
-          <h2 id="aside-title">Discovery comes first.</h2>
-          <p id="aside-description">A client must find an access point before it can join the network.</p>
-          <div class="control-region"><div class="small-label">INTERACTIVE CONTROLS</div><div id="lab-controls"></div></div>
-          <div class="insight-card"><span class="small-label">WHAT THIS SHOWS</span><p id="insight-text">The client is scanning for a wireless network.</p></div>
-          <div class="prompt-block"><span class="small-label">ASK YOUR CLASS</span><p id="teacher-prompt">How does your phone find a nearby access point?</p></div>
-          <button type="button" class="reset-button" id="reset-lab">↺ Reset this diagram</button>
-        </aside>
-      </div>
-      <div class="lesson-foot">
-        <div><strong id="foot-title">DISCOVER / AUTHENTICATE / ASSOCIATE</strong><p id="foot-description">The diagrams simplify real protocols so you can focus on the important ideas.</p></div>
-        <div class="key-hint">Use the left / right arrow keys to step through the selected diagram.</div>
-      </div>
-    </section>
-    <section class="below-lab">
-      <div><span class="eyebrow">Instructor guide</span><h2>When to use each<br>diagram_</h2></div>
-      <div class="slide-map">
-        <div><span>01</span><strong>Slides 16–18</strong><p>Discovery, authentication, association, and security setup.</p></div>
-        <div><span>02</span><strong>Slide 15</strong><p>Shared airtime, listening, random backoff, and ACKs.</p></div>
-        <div><span>03</span><strong>Slide 14</strong><p>Tap an 802.11 frame field to explain its purpose.</p></div>
-        <div><span>04</span><strong>Slide 19</strong><p>Compare home wireless with controller-managed campus Wi-Fi.</p></div>
-        <div><span>05</span><strong>Slides 22–25</strong><p>Compare interception, rogue APs, evil twins, and interference.</p></div>
-      </div>
-    </section>
-    <p class="safety-note">Conceptual simulation only. No Wi-Fi scanning, packet capture, network attacks, student data collection, or backend services. Cisco and IEEE terminology is used for teaching; this site is not an official Cisco resource.</p>
-  </main>
-  <footer><div class="wrap">SANCHEZ ELECTRONICS / CYBERSECURITY · INTERACTIVE LEARNING · NO STUDENT RESPONSES COLLECTED</div></footer>
-  <noscript><p class="wrap">This visual lab needs JavaScript enabled to run the diagrams.</p></noscript>
+  <div class="section-divider"><span>01 / WIRELESS COMMUNICATIONS</span><strong>5.1</strong></div>
+
+  <section class="visual-card" aria-labelledby="wireless-join">
+    <div class="visual-copy"><span class="num">01 / SLIDES 16–18</span><h2 id="wireless-join">Joining Wi-Fi</h2><p>A device finds and connects to an access point.</p><div class="mini-sequence"><span>DISCOVER</span><b>→</b><span>AUTHENTICATE</span><b>→</b><span>ASSOCIATE</span></div></div>
+    <div class="visual-figure tint-cyan">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="join-title join-desc">
+        <title id="join-title">Wireless connection</title><desc id="join-desc">A phone discovers and associates with an access point, then data travels into the network.</desc>
+        <path class="faint-line" d="M225 172H378M528 172H656"/>
+        <g class="join-broadcast">
+          <path d="M336 127Q361 151 336 177" class="wave"/>
+          <path d="M308 102Q351 151 308 200" class="wave"/>
+        </g>
+        <g class="join-signal-one"><circle cx="227" cy="172" r="8" class="signal"/></g>
+        <g class="join-signal-two"><circle cx="530" cy="172" r="8" class="signal"/></g>
+        <g transform="translate(130 104)"><rect class="device" width="92" height="135" rx="14"/><rect class="screen" x="12" y="13" width="68" height="96" rx="5"/><circle cx="46" cy="121" r="4" class="soft-fill"/></g>
+        <g transform="translate(384 106)"><path class="antenna" d="M20 45V6M124 45V6"/><rect class="device" y="45" width="145" height="99" rx="13"/><circle cx="24" cy="124" r="5" class="good-fill"/><path class="wireless-glyph" d="M49 33Q72 12 95 33M58 43Q72 29 86 43M70 53l2 2 2-2"/></g>
+        <g transform="translate(656 112)"><path class="device" d="M41 121C2 123 0 80 24 68C27 28 81 18 108 50C143 40 171 67 164 93C161 113 144 122 120 121Z"/></g>
+        <g class="figure-labels"><text x="177" y="285">PHONE</text><text x="456" y="285">ACCESS POINT</text><text x="744" y="285">NETWORK</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="visual-card" aria-labelledby="csma">
+    <div class="visual-copy"><span class="num">02 / SLIDE 15</span><h2 id="csma">Taking turns</h2><p>Wi-Fi devices listen and wait before sending.</p><div class="mini-sequence"><span>LISTEN</span><b>→</b><span>WAIT</span><b>→</b><span>SEND</span></div></div>
+    <div class="visual-figure tint-cream">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="csma-title csma-desc">
+        <title id="csma-title">CSMA/CA shared airtime</title><desc id="csma-desc">Client A and Client B take turns sending data to an access point instead of transmitting together.</desc>
+        <g transform="translate(105 48)"><rect class="device" width="105" height="74" rx="9"/><rect class="screen" x="11" y="10" width="83" height="51" rx="3"/><path class="outline" d="M42 74v12h21V74M29 87H77"/></g>
+        <g transform="translate(105 213)"><rect class="device" width="105" height="74" rx="9"/><rect class="screen" x="11" y="10" width="83" height="51" rx="3"/><path class="outline" d="M42 74v12h21V74M29 87H77"/></g>
+        <path class="faint-line" d="M219 86H598M219 249H598"/>
+        <g class="turn-a"><circle cx="240" cy="86" r="9" class="signal"/></g><g class="turn-b"><circle cx="240" cy="249" r="9" class="signal"/></g>
+        <g transform="translate(626 109)"><path class="antenna" d="M12 45V10M125 45V10"/><rect class="device" x="0" y="45" width="140" height="90" rx="13"/><circle cx="22" cy="116" r="5" class="good-fill"/><path class="wireless-glyph" d="M39 32Q69 2 99 32M52 42Q69 23 86 42"/></g>
+        <g class="figure-labels"><text x="157" y="152">CLIENT A</text><text x="157" y="328">CLIENT B</text><text x="695" y="291">SHARED CHANNEL</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="visual-card" aria-labelledby="frame">
+    <div class="visual-copy"><span class="num">03 / SLIDE 14</span><h2 id="frame">What's in a frame?</h2><p>A wireless frame contains control details, data, and an error check.</p></div>
+    <div class="visual-figure tint-cyan">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="frame-title frame-desc">
+        <title id="frame-title">Simplified 802.11 frame</title><desc id="frame-desc">A wireless frame with header, payload and frame check sequence sections highlighted in order.</desc>
+        <g transform="translate(64 111)">
+          <rect x="0" y="0" width="288" height="125" rx="5" class="frame-header"/><rect x="296" y="0" width="320" height="125" rx="5" class="frame-payload"/><rect x="624" y="0" width="145" height="125" rx="5" class="frame-fcs"/>
+          <rect x="0" y="0" width="288" height="125" rx="5" class="frame-glow glow-one"/>
+          <rect x="296" y="0" width="320" height="125" rx="5" class="frame-glow glow-two"/>
+          <rect x="624" y="0" width="145" height="125" rx="5" class="frame-glow glow-three"/>
+          <g class="frame-text"><text x="144" y="59">HEADER</text><text x="456" y="59">PAYLOAD</text><text x="696" y="59">FCS</text></g>
+          <g class="frame-small"><text x="144" y="89">ADDRESSES + CONTROL</text><text x="456" y="89">DATA</text><text x="696" y="89">ERROR CHECK</text></g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="visual-card" aria-labelledby="wlc">
+    <div class="visual-copy"><span class="num">04 / SLIDE 19</span><h2 id="wlc">School Wi-Fi</h2><p>One controller can manage many access points.</p></div>
+    <div class="visual-figure tint-cream">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="wlc-title wlc-desc">
+        <title id="wlc-title">Wireless LAN controller managing access points</title><desc id="wlc-desc">One wireless controller sends management connections to three separate lightweight access points.</desc>
+        <rect class="device" x="365" y="38" rx="12" width="172" height="77"/><circle class="good-fill" cx="389" cy="60" r="5"/><path class="outline" d="M409 63H513M409 82H490"/>
+        <g class="figure-labels"><text x="450" y="19">CONTROLLER</text></g>
+        <path class="faint-line" d="M451 115V154H161V201M451 154V201M451 154H741V201"/>
+        <path class="controller-flow" d="M451 115V154H161V201M451 115V201M451 115V154H741V201"/>
+        <g transform="translate(104 201)"><path class="antenna" d="M15 36V2M98 36V2"/><rect class="device" y="36" width="114" height="66" rx="10"/><circle class="good-fill" cx="20" cy="83" r="4"/></g>
+        <g transform="translate(393 201)"><path class="antenna" d="M15 36V2M98 36V2"/><rect class="device" y="36" width="114" height="66" rx="10"/><circle class="good-fill" cx="20" cy="83" r="4"/></g>
+        <g transform="translate(683 201)"><path class="antenna" d="M15 36V2M98 36V2"/><rect class="device" y="36" width="114" height="66" rx="10"/><circle class="good-fill" cx="20" cy="83" r="4"/></g>
+        <g class="figure-labels"><text x="161" y="326">AP 1</text><text x="450" y="326">AP 2</text><text x="740" y="326">AP 3</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <div class="section-divider threat-divider"><span>02 / WLAN THREATS</span><strong>5.2</strong></div>
+
+  <section class="visual-card" aria-labelledby="rogue">
+    <div class="visual-copy"><span class="num">05 / SLIDE 24</span><h2 id="rogue">Rogue access point</h2><p>An unapproved AP can create a new way into the network.</p></div>
+    <div class="visual-figure tint-cyan">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="rogue-title rogue-desc">
+        <title id="rogue-title">Unauthorized AP attached to a wired network</title><desc id="rogue-desc">An approved AP and an unauthorized rogue AP are both connected to the same wired school network.</desc>
+        <rect class="device" x="343" y="42" rx="8" width="215" height="75"/><path class="outline" d="M368 73H532M368 90H532"/><g class="figure-labels"><text x="450" y="25">SCHOOL NETWORK</text></g>
+        <path class="faint-line" d="M450 117V167H227V206M450 167H672V206"/>
+        <g transform="translate(162 206)"><path class="antenna" d="M18 32V0M112 32V0"/><rect class="device" y="32" width="130" height="74" rx="10"/><circle class="good-fill" cx="23" cy="87" r="5"/></g>
+        <g transform="translate(607 206)"><path class="antenna danger-line" d="M18 32V0M112 32V0"/><rect class="device rogue-device" y="32" width="130" height="74" rx="10"/><circle class="bad-fill" cx="23" cy="87" r="5"/></g>
+        <g class="rogue-pulse"><circle cx="673" cy="193" r="34" fill="none" stroke="#c07e77" stroke-width="2"/></g>
+        <g class="figure-labels"><text x="227" y="331">APPROVED</text><text x="672" y="331" class="bad-text">UNAUTHORIZED</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="visual-card" aria-labelledby="evil">
+    <div class="visual-copy"><span class="num">06 / SLIDE 25</span><h2 id="evil">Evil twin</h2><p>A fake Wi-Fi network copies the real network's name.</p></div>
+    <div class="visual-figure tint-cream">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="evil-title evil-desc">
+        <title id="evil-title">Evil twin network imitates a trusted SSID</title><desc id="evil-desc">A phone sees two access points advertising the same name; the malicious copy is not the legitimate access point.</desc>
+        <g transform="translate(85 112)"><rect class="device" width="88" height="135" rx="14"/><rect class="screen" x="12" y="12" width="64" height="97" rx="4"/><circle class="soft-fill" cx="44" cy="121" r="4"/></g>
+        <path class="faint-line" d="M178 178H280M178 178H561"/>
+        <g class="evil-route"><path d="M185 178H550" class="danger-flow"/></g>
+        <g transform="translate(279 113)"><path class="antenna" d="M16 34V0M114 34V0"/><rect class="device" y="34" width="130" height="95" rx="11"/><circle class="good-fill" cx="23" cy="107" r="4"/></g>
+        <g transform="translate(561 113)"><path class="antenna danger-line" d="M16 34V0M114 34V0"/><rect class="device rogue-device" y="34" width="130" height="95" rx="11"/><circle class="bad-fill" cx="23" cy="107" r="4"/></g>
+        <g class="network-names"><text x="344" y="77">SCHOOL_WIFI</text><text x="626" y="77">SCHOOL_WIFI</text></g>
+        <g class="figure-labels"><text x="129" y="286">PHONE</text><text x="344" y="286">REAL</text><text x="626" y="286" class="bad-text">FAKE</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="visual-card" aria-labelledby="interference">
+    <div class="visual-copy"><span class="num">07 / SLIDE 23</span><h2 id="interference">Wi-Fi interference</h2><p>Radio interference can disrupt connections — even without an attacker.</p></div>
+    <div class="visual-figure tint-cyan">
+      <svg viewBox="0 0 900 350" role="img" aria-labelledby="noise-title noise-desc">
+        <title id="noise-title">Wireless interference</title><desc id="noise-desc">A wireless client communicates with an AP, while interference crosses the radio channel and temporarily disrupts reliable transmission.</desc>
+        <g transform="translate(94 132)"><rect class="device" width="90" height="128" rx="13"/><rect class="screen" x="11" y="12" width="68" height="94" rx="4"/><circle class="soft-fill" cx="45" cy="116" r="3"/></g>
+        <g transform="translate(669 127)"><path class="antenna" d="M14 41V0M120 41V0"/><rect class="device" y="41" width="133" height="94" rx="11"/></g>
+        <path class="faint-line" d="M191 196H653"/>
+        <g class="interference-signal"><circle class="signal" cx="209" cy="196" r="9"/></g>
+        <g class="interference-noise">
+          <path d="M365 62L402 114L371 146L415 186L380 221L417 268L391 307" fill="none" stroke="#ba7872" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M474 62L444 114L476 146L436 186L478 221L440 268L473 307" fill="none" stroke="#ba7872" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+        </g>
+        <g class="figure-labels"><text x="139" y="310">CLIENT</text><text x="735" y="310">ACCESS POINT</text></g>
+      </svg>
+    </div>
+  </section>
+  <p class="sim-note">Animated concept diagrams, not live network demonstrations. Designed for projected teaching; no controls or student data collection.</p>
+</main>
+<footer><div class="wrap">SANCHEZ ELECTRONICS / CYBERSECURITY · EDUCATIONAL DIAGRAMS</div></footer>
 </body>
 </html>
